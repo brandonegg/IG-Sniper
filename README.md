@@ -1,6 +1,11 @@
 # IG-Sniper
 An Instagram username taker/claimer - Check desired usernames availability. When it becomes available, original username will be changed to desired username.
 
+> **Modifications by @brandonegg:**
+> - Update & initialize the go module.
+> - Adapt functions designed for windows terminal to a unix environment.
+> - Add Dockerfile for docker deployment.
+> - Move to environment variable for account config, omit .json files to prevent commiting secrets in repository.
 
 ## About
 This program monitors usernames and checks their availability. It checks each username from `targets.txt` with two methods. The first method is by checking with the web create api, and
@@ -12,8 +17,7 @@ sent to the account that has been logged in to update their details (changing us
 
 ## Usage
 ```
-go get "github.com/dlclark/regexp2"
-go get "github.com/gookit/color"
+go run .
 ```
 
 - Edit `account.json` and put your Instagram login details.
